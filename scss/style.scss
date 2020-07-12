@@ -1,8 +1,176 @@
 @import '../css/normalize.scss';
-
+//Mixins
 @mixin font-lato {
 font-family: 'Lato', sans-serif;
 }
 @mixin font-montserrat{
 font-family: 'Montserrat', sans-serif;
+}
+//Mixins
+/* Mask */
+$color-white: #ffffff;
+* {
+    box-sizing: border-box;
+}
+body {
+    @include font-lato;
+    color: #414141;
+}
+.section-outer{}
+.section-inner{
+    width: 1180px;
+    margin: 0 auto;
+}
+.description-item {
+    &__icon {
+        margin-bottom: 20px;
+    }
+    &__title {
+        margin-bottom: 14px;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: bold;
+        margin-top: 30px;
+    }
+    &__content{}
+    &__text{
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 300;
+    }
+}
+//-----
+.section-header {
+    color: $color-white;
+    background: url('../img/header-background.png') no-repeat 50% 50%;
+    background-size: cover;
+    position: relative;
+    .section-inner {
+        height: 100vh;
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 5;
+        background-color: rgba(20,39,41,0.6);
+    }
+    &-logo {
+        font-weight: bold;
+        font-size: 24px;
+        flex-shrink: 1;
+        padding-top: 35px;
+    }
+    &-content {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+    }
+    &-wrapper {
+        &__title,
+        &__subtitle{
+            text-align: center;
+        }
+        &__title{
+            font-weight: bold;
+            font-size: 56px;
+            line-height: 60px;
+            margin-bottom: 16px;
+        }
+        &__subtitle {
+            @include font-montserrat;
+            font-size: 18px;
+            line-height: 32px;
+            width: 80%;
+            margin-bottom:0 auto 44px;
+        }
+        &__form {
+            display: flex;
+            &-input{
+                flex: 1;
+                padding-right: 40px;
+                input{
+                    @include font-montserrat;
+                    font-size: 16px;
+                    border: none;
+                    background: rgba(255,255,255,0.25);
+                    color: $color-white;
+                    padding: 16px 20px;
+                    width: 100%;
+                    outline: none;
+                    border-radius: 4px;
+                    &::placeholder{
+                        color: $color-white;
+                    }
+                }
+            }
+            &-button{
+                button{
+                    @include font-montserrat;
+                    font-size: 18px;
+                    border: none;
+                    padding: 16px 20px;
+                    background: linear-gradient(to right,#FE985B,#FE4FA7);
+                    outline: none;
+                    border-radius: 4px;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}
+//-----------------
+.section-promo {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.section-promo-first {
+    display: flex;
+    &__content,&__video {
+        flex-basis: 50%;
+    }
+    &__content {
+        padding-right: 90px;
+        .title{
+            font-size: 32px;
+            line-height: 51px;
+            font-weight: bold;
+            margin-bottom: 56px;
+        }
+        .subtitle{
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        .text{
+            font-size: 16px;
+            line-height: 27px;
+            font-weight: 300;
+            margin-top: 14px;
+        }
+    }
+    &__video {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.section-promo-second {
+    display: flex;
+    padding-top: 86px;
+    margin-top: 120px;
+    border-top: 1px solid #e2e2e2;
+
 }
