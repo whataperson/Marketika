@@ -146,17 +146,8 @@ body {
             font-weight: bold;
             margin-bottom: 56px;
         }
-        .subtitle{
-            font-size: 18px;
-            line-height: 22px;
-            font-weight: bold;
-            margin-top: 30px;
-        }
-        .text{
-            font-size: 16px;
-            line-height: 27px;
-            font-weight: 300;
-            margin-top: 14px;
+        .description-item {
+            margin-top: 28px;
         }
     }
     &__video {
@@ -172,5 +163,36 @@ body {
     padding-top: 86px;
     margin-top: 120px;
     border-top: 1px solid #e2e2e2;
-
+    text-align: center;
+    .description-item + .description-item {
+        margin-left: 40px;
+    }
+}
+.section-founder {
+    background: #F6FAFD;
+    padding-top: 34px;
+    .section-inner {
+        display: flex;
+    }
+    &__img {
+        align-self: flex-end;
+    }
+    &__content {
+        align-self: center;
+        padding-left: 50px;
+        &-text {
+            @include font-montserrat;
+            font-size: 24px;
+            line-height: 40px;
+        }
+        &-name {
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: bold;
+        }
+        &-post {
+            font-size: 20px;
+            line-height: 29px;
+        }
+    }
 }

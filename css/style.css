@@ -414,16 +414,8 @@ body {
       line-height: 51px;
       font-weight: bold;
       margin-bottom: 56px; }
-    .section-promo-first__content .subtitle {
-      font-size: 18px;
-      line-height: 22px;
-      font-weight: bold;
-      margin-top: 30px; }
-    .section-promo-first__content .text {
-      font-size: 16px;
-      line-height: 27px;
-      font-weight: 300;
-      margin-top: 14px; }
+    .section-promo-first__content .description-item {
+      margin-top: 28px; }
   .section-promo-first__video img {
     width: 100%;
     height: auto; }
@@ -432,4 +424,29 @@ body {
   display: flex;
   padding-top: 86px;
   margin-top: 120px;
-  border-top: 1px solid #e2e2e2; }
+  border-top: 1px solid #e2e2e2;
+  text-align: center; }
+  .section-promo-second .description-item + .description-item {
+    margin-left: 40px; }
+
+.section-founder {
+  background: #F6FAFD;
+  padding-top: 34px; }
+  .section-founder .section-inner {
+    display: flex; }
+  .section-founder__img {
+    align-self: flex-end; }
+  .section-founder__content {
+    align-self: center;
+    padding-left: 50px; }
+    .section-founder__content-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 24px;
+      line-height: 40px; }
+    .section-founder__content-name {
+      font-size: 24px;
+      line-height: 29px;
+      font-weight: bold; }
+    .section-founder__content-post {
+      font-size: 20px;
+      line-height: 29px; }
